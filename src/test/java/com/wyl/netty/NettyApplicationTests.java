@@ -8,6 +8,12 @@ class NettyApplicationTests {
 
     @Test
     void contextLoads() {
+
+    }
+
+    public static void main(String[] args) throws Exception{
+        int read = System.in.read();
+        System.out.println(read);
     }
 
 }

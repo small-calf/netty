@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f98008b-311c-47f5-86b3-a990ab10536d" name="Default Changelist" comment="" />
+    <list default="true" id="5f98008b-311c-47f5-86b3-a990ab10536d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyl/netty/nio/NioClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyl/netty/nio/NioServe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyl/netty/nio/groupchat/GroupChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/帮助.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/wyl/netty/NettyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/wyl/netty/NettyApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SCOPE" value="All" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -19,6 +36,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1tswdxkHNmdLElPEkYN8qK4bwNr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,12 +46,73 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.NioClient">
+    <configuration name="NettyApplicationTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyl.netty.NettyApplicationTests" />
+      <module name="netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.netty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NioClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyl.netty.nio.NioClient" />
+      <module name="netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.netty.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NioServe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyl.netty.nio.NioServe" />
+      <module name="netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.netty.nio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyl.netty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wyl.netty" />
+      <option name="MAIN_CLASS_NAME" value="com.wyl.netty.NettyApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NettyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="netty" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wyl.netty.NettyApplication" />
@@ -41,6 +120,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NioClient" />
+        <item itemvalue="Application.NioServe" />
+        <item itemvalue="Application.NettyApplicationTests" />
+        <item itemvalue="JUnit.NettyApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,7 +139,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623571196034</updated>
-      <workItem from="1623571198974" duration="579000" />
+      <workItem from="1623571198974" duration="5869000" />
+      <workItem from="1623633117036" duration="10318000" />
     </task>
     <servers />
   </component>
@@ -60,9 +148,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1623571220708">
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1623577109462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1623571220708" />
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1623577109462" />
+    <state width="1237" height="192" key="GridCell.Tab.0.bottom" timestamp="1623652152912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="192" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623652152912" />
+    <state width="1237" height="192" key="GridCell.Tab.0.center" timestamp="1623652152912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="192" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623652152912" />
+    <state width="1237" height="192" key="GridCell.Tab.0.left" timestamp="1623652152912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="192" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623652152912" />
+    <state width="1237" height="192" key="GridCell.Tab.0.right" timestamp="1623652152912">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="192" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623652152912" />
+    <state x="362" y="82" width="576" height="524" key="StructurePopup" timestamp="1623634637741">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="362" y="82" width="576" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1623634637741" />
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1623633301109">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1623633301109" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1623576713883">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1623576713883" />
   </component>
 </project>
