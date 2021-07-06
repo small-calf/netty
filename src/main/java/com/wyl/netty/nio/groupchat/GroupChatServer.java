@@ -41,7 +41,7 @@ public class GroupChatServer {
     public void listen() {
         try {
             while (true) {
-                int count = selector.select(2000);
+                int count = selector.select();
                 if (count > 0) {
                     Iterator<SelectionKey> selectionKeys = selector.selectedKeys().iterator();
                     while (selectionKeys.hasNext()) {
@@ -56,23 +56,77 @@ public class GroupChatServer {
 
                         }
                         if (key.isReadable()) {
-                            SocketChannel channel = (SocketChannel)key.channel();
-                            ByteBuffer buffer = (ByteBuffer)key.attachment();
-                            channel.read(buffer);
-                            channel.close();;
+                           readData(key);
                         }
                         selectionKeys.remove();
                     }
+                }else {
+                    System.out.println("等待...");
                 }
             }
         }catch (Exception e) {
             e.printStackTrace();
         }finally {
+        }
+    }
+    //读取客户端消息
+    private void readData(SelectionKey key) {
+        //定义socketChannel
+        SocketChannel channel = null;
+        try {
+            //取到关联的channel
+            channel = (SocketChannel) key.channel();
+            ByteBuffer buffer = ByteBuffer.allocate(1024);
+            int count = channel.read(buffer);
+            if (count > 0) {
+                //把缓存区的数据转成字符串
+                String msg = new String(buffer.array());
+                //输出该消息
+                System.out.println("from 客户端 " + msg);
+
+                //向其他客户端转发消息(去掉自己)，单独封装成一个方法
+                sendInfoToOtherClients(msg,channel);
+            }
+        }catch (IOException e) {
+            try {
+                System.out.println(channel.getRemoteAddress() + " 离线");
+                //取消注册
+                key.cancel();
+                //关闭通道
+                channel.close();
+            }catch (IOException e2) {
+                e2.printStackTrace();
+            }
 
         }
     }
 
+    //转发消息给其他客户端
+    private void sendInfoToOtherClients(String msg, SocketChannel self) throws IOException{
+        System.out.println("服务器转变消息中...");
+        //遍历 所有注册到selector 上的 SocketChannel, 并排除self
+        for (SelectionKey key: selector.keys()) {
+            //通过key获取对应的socketChannel
+            Channel targetChannel = key.channel();
+
+            //排除自己
+            if (targetChannel instanceof SocketChannel && targetChannel != self) {
+                //转型
+                SocketChannel dest = (SocketChannel) targetChannel;
+                //将msg存储到buffer
+                ByteBuffer buffer = ByteBuffer.wrap(msg.getBytes());
+                //将buffer的数据写入到通道
+                dest.write(buffer);
+            }
+
+        }
+    }
+
+
     public static void main(String[] args) {
+        //创建服务器对象
+        GroupChatServer groupChatServer = new GroupChatServer();
+        groupChatServer.listen();
 
     }
 }
